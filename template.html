@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ market }} - Chance of Winning</title>
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|PT+Serif:400' rel='stylesheet' type='text/css'>
+    <style media="screen">
+      a {
+        background-color: transparent; /* Remove the gray background color from active links in IE 10. */
+        color: #327CCB;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-transition: color .2s;
+        transition: color .2s;
+      }
+
+      html, body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+      }
+
+      nav {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      section {
+        width: 225px;
+      }
+
+      h1 {
+        color: #222;
+        font: 700 24px/24px 'pt sans narrow';
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: #555;
+        font: 700 24px/24px 'pt sans narrow';
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      p, ul, li {
+        color: #222;
+        font: 400 14px/18px 'pt serif';
+        text-align: justify;
+      }
+
+      ul, li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-indent: 0;
+        line-height: 1.4em;
+      }
+
+      .text-right {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        {% for key, m in markets.items() %}
+        <li><a href="{{ key }}.html">{{ m.name }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </nav>
+    <section>
+      <h1>Chance of Winning</h1>
+      <h2>{{ market }}</h2>
+
+      <p>
+        <ul>
+          {% for runner in runners %}
+          <li>{{ runner.0 }}:<span class="text-right">{{ runner.1|round(2) }}%</span></li>
+          {% endfor %}
+        </ul>
+      </p>
+
+      <p class="text-right">
+        Data: <a href="{{ market_url }}">Betfair</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        <a href="https://github.com/sesh/elections">Source</a> |
+        Design: <a href="https://github.com/ubuwaits/beautiful-web-type">Beautiful Web Type</a>
+      </p>
+    </footer>
+  </body>
+</html>
