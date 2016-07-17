@@ -23,6 +23,8 @@ def get_betfair_chances(url):
             lay = float(prices[1].text.strip().splitlines()[0])
         except IndexError:
             lay = back
+        except ValueError:
+            lay = back
 
         chance = ((1 / back + 1 / lay) / 2) * 100
 
