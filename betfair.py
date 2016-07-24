@@ -28,7 +28,7 @@ def get_betfair_chances(url):
 
         chance = ((1 / back + 1 / lay) / 2) * 100
 
-        if chance > 0.5:
+        if chance > 2.0:
             chances.append((name, chance))
 
     return chances
