@@ -11,6 +11,10 @@ BETTING_MARKETS = {
     'usa': {
         'url': 'https://www.betfair.com.au/sports/politics/2016-us-presidential-election/8887484/next-president/nonsport/1.107373419',  # noqa
         'name': 'Next US President'
+    },
+    'afl17': {
+        'url': 'https://www.betfair.com.au/sports/australian-rules/afl-2017/10164109/premiers-2017/undifferentiated/1.127270933',
+        'name': 'AFL Premiers 2017'
     }
 }
 
