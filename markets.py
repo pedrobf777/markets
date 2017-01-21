@@ -14,7 +14,7 @@ BETTING_MARKETS = {
     },
     'trump': {
         'name': 'Trump Exit',
-        'url': 'https://www.betfair.com.au/sports/politics/usa-trump-specials/10614449'
+        'url': 'https://www.betfair.com.au/sports/politics/usa-trump-specials/10614449/trump-exit-date/nonsport/1.129097136'
     }
 }
 
