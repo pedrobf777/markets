@@ -11,6 +11,10 @@ BETTING_MARKETS = {
     'afl17': {
         'url': 'https://www.betfair.com.au/sports/australian-rules/afl-2017/10164109/premiers-2017/undifferentiated/1.127270933',
         'name': 'AFL Premiers 2017'
+    },
+    'trump': {
+        'name': 'Trump Exit',
+        'url': 'https://www.betfair.com.au/sports/politics/usa-trump-specials/10614449'
     }
 }
 
